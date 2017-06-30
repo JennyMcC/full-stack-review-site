@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<style>
+	
+body {
+	background-color: brown;
+	font-family: "Franklin Gothic Medium";
+}
+
+h1 {
+	background-image: url("/images/cans.jpg");
+	background-size: 100px, 200px;
+	border: 1px solid black;
+	box-shadow: 10px 10px 5px black;
+	font-family: "impact";
+	margin: 50px;
+	padding: 10px;
+	text-align: center;
+}
+
+h4 {
+	font-style: italic;
+	text-align: center;
+	text-decoration: underline;
+}
+
+p {
+	margin-left: 150px;
+	margin-right: 150px;
+	text-indent: 25px;
+}
+
+img {
+	display: block;
+	height: auto;
+	margin: auto;
+	width: 30%;
+}
+
+</style>
+
+
+
+<title>Reviews</title>
+
+</head>
+
+<body>
+	<div th:each="cheapBeer: ${cheapBeer}">
+	<h1 th:text="${cheapBeer.name}"></h1>
+
+    <div>
+    	<h4 th:text="${cheapBeer.tag}"></h4>
+		<p th:text="${cheapBeer.review}"></p>
+		<img th:src="${cheapBeer.imageURL}"/>
+		</div>
+		
+	
+	</div>
+
+</body>
+</html>

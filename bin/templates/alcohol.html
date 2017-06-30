@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<style>
+
+body {
+	background-color: brown;
+}
+
+h1 {
+	background-image: url("/images/cans.jpg");
+	background-size: 100px, 200px;
+	border: 1px solid black;
+	box-shadow: 10px 10px 5px black;
+	font-family: "impact";
+	margin: 50px;
+	padding: 10px;
+	text-align: center;
+}
+
+p {
+	font-family: sans-serif;
+	font-weight: bold;
+	margin-left: 150px;
+	margin-right: 150px;
+	text-indent: 25px;
+}
+
+ul a {
+	font-family: "impact";
+	font-size: 150%;
+ 	display: flex;
+	justify-content: center;
+}
+
+ul a:link {
+	color: #050737; 
+}
+
+ul a:visited {
+	color: #050737;
+}
+
+ul a:hover {
+	color: red;
+}
+
+
+
+</style>
+
+	<title>Insert title here</title>
+</head>
+
+<body>
+
+<h1>First page stuff</h1>
+
+<p>Have you ever been sitting around on a Saturday night with only $10 to your name and thought, 'Gee, there are so many cheap beers out there, how will I ever decide which one to drink tonight?' Wonder no more, my friends. Click the following links to find out just what you're getting yourself into with each of the following beers: </p>
+
+	<ul>
+		<li th:each="currentBrand: ${brand}">
+		<a th:href="@{/brand(id=${currentBrand.id})}" th:text="${currentBrand.name}"></a></li>
+	</ul>
+
+
+
+</body>
+</html>
