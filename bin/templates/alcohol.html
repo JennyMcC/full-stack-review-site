@@ -46,25 +46,23 @@ ul a:hover {
 	color: red;
 }
 
-
-
 </style>
 
 	<title>Insert title here</title>
+	
 </head>
 
 <body>
 
-<h1>First page stuff</h1>
+<h1>Cheap Beer Reviews</h1>
 
 <p>Have you ever been sitting around on a Saturday night with only $10 to your name and thought, 'Gee, there are so many cheap beers out there, how will I ever decide which one to drink tonight?' Wonder no more, my friends. Click the following links to find out just what you're getting yourself into with each of the following beers: </p>
 
-	<ul>
-		<li th:each="currentBrand: ${brand}">
-		<a th:href="@{/brand(id=${currentBrand.id})}" th:text="${currentBrand.name}"></a></li>
-	</ul>
-
-
+	<nav>
+		<ul th:each="currentBrand: ${brand}">
+			<a th:href="@{/brand(id=${currentBrand.id})}" th:text="${currentBrand.name}"></a>
+		</ul>
+	</nav>
 
 </body>
 </html>

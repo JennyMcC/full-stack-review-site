@@ -33,16 +33,4 @@ public class AlcoholController {
 		return "cheapBeer";
 	}
 	
-	
-//	@RequestMapping("/cheapBeer")
-//	public String retrieveCheapBeers(Model model) {
-//		model.addAttribute("cheapBeer", cheapBeerRepo.findAll());
-//		return "cheapBeer";
-//	}
-	
-//	@RequestMapping("/")
-//	public String showHomepage() {
-//		return "home";
-//	}
-	
 }

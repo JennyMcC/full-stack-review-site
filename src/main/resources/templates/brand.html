@@ -61,16 +61,15 @@ nav ul a:hover {
 
 <body>
 	
-	<h1>This brands cheapest beers</h1>
+	<h1 th:each="currentBrand: ${brand}" th:text="${currentBrand.name}"></h1>
 	
 	<p>more words</p>
 
 <div class="links">
 	<nav>
-	<ul>
-		<li th:each="currentCheapBeer: ${brand.beers}">
-		<a th:href="@{/cheapBeer(id=${currentCheapBeer.id})}" th:text="${currentCheapBeer.name}"></a></li>
-	</ul>
+		<ul th:each="currentCheapBeer: ${brand.beers}">
+		<a th:href="@{/cheapBeer(id=${currentCheapBeer.id})}" th:text="${currentCheapBeer.name}"></a>
+		</ul>
 	</nav>
 </div>
 
