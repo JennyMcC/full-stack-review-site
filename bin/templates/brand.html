@@ -2,26 +2,26 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 
-	<title>Main Page</title>
+<title>Each brand's Page</title>
 	
-	<link rel="stylesheet" type="text/css" href="styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+
 	
 </head>
 
 <body>
 	
 	<h1 th:each="currentBrand: ${brand}" th:text="${currentBrand.name}"></h1>
-	
-	<p>more words</p>
 
-<div class="links">
-	<nav>
+	<div class="beers">
 		<ul th:each="currentCheapBeer: ${brand.beers}">
-		<a th:href="@{/cheapBeer(id=${currentCheapBeer.id})}" th:text="${currentCheapBeer.name}"></a>
+			<a th:href="@{/cheapBeer(id=${currentCheapBeer.id})}" th:text="${currentCheapBeer.name}"></a>
 		</ul>
-	</nav>
-</div>
+	</div>
 
+	<div class="home">
+		<a th:href="@{/alcohol}">Back to Breweries List</a>
+	</div>
 
 </body>
 </html>

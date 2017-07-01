@@ -9,16 +9,19 @@
 </head>
 
 <body>
+
 	<div th:each="cheapBeer: ${cheapBeer}">
 		<h1 th:text="${cheapBeer.name}"></h1>
-
+	</div>
+	
     <div>
     	<h4 th:text="${cheapBeer.tag}"></h4>
 		<p th:text="${cheapBeer.review}"></p>
 		<img th:src="${cheapBeer.imageURL}"/>
-	</div>
-		
+	</div>	
 	
+	<div class="home">
+		<a href="#" onClick="history.go(-1);return true;">Back to Beers List</a>
 	</div>
 
 </body>

@@ -21,25 +21,58 @@ h4 {
 }
 
 p {
-	font-family: sans-serif;
+	font-family: times header;
 	font-weight: bold;
 	margin-left: 150px;
 	margin-right: 150px;
+	padding-bottom: 10px;
 	text-indent: 25px;
 }
 
 img {
+	border: 1px solid white;
 	display: block;
 	height: auto;
 	margin: auto;
 	width: 30%;
 }
 
-.links {
+.list {
 	background-image: url("/images/broke.jpg");
 	background-size: 200px, 200px;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.beers {
+	background-image: url("/images/smashedcan.jpg");
+	background-size: 200px, 200px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.home:before {
+	content: url("images/beericon2.png");
+	margin-right: 5px;
+}
+
+.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
+}
+
+.home a:link {
+	color: black;
+}
+
+.home a:visited {
+	color: black;
+}
+
+.home a:hover {
+	color: yellow;
 }
 
 ul a {
@@ -60,3 +93,4 @@ ul a:visited {
 ul a:hover {
 	color: red;
 }
+
