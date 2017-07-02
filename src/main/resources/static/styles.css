@@ -15,14 +15,13 @@ h1 {
 }
 
 h4 {
-	font-style: italic;
+	font-family: bookman;
 	text-align: center;
 	text-decoration: underline;
 }
 
 p {
-	font-family: times header;
-	font-weight: bold;
+	font-family: bookman;
 	margin-left: 150px;
 	margin-right: 150px;
 	padding-bottom: 10px;
@@ -38,21 +37,19 @@ img {
 }
 
 .list {
-	background-image: url("/images/broke.jpg");
-	background-size: 200px, 200px;
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .beers {
-	background-image: url("/images/smashedcan.jpg");
-	background-size: 200px, 200px;
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .home:before {
-	content: url("images/beericon2.png");
+	content: url("images/brokenbottle.png");
 	margin-right: 5px;
 }
 
@@ -76,6 +73,13 @@ img {
 }
 
 ul a {
+	background-image: url("/images/beericon2.png");
+	background-size: 60px, 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-style: double;
+	border-width: 5px;
+	padding: 40px;
 	font-family: "impact";
 	font-size: 150%;
  	display: flex;
@@ -91,6 +95,6 @@ ul a:visited {
 }
 
 ul a:hover {
-	color: red;
+	color: #8D8D8D;
 }
 

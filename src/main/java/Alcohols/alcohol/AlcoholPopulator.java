@@ -34,12 +34,14 @@ public class AlcoholPopulator implements CommandLineRunner {
 		CheapBeer icehouse = new CheapBeer(millerCoors, "Icehouse", "Yuck.",
 				"I went to my first kegger at 15 where they had a keg of Icehouse. It very nearly scarred me for life. Luckily, I grew to love beer in other forms but I have never again drank Icehouse. What I'm saying is, Icehouse was brewed to make kids barf. It's fine. It's possible that as an adult I would feel differently about it, but I am unwilling to find out.",
 				"/images/bitterbeerface.jpg");
-
+		CheapBeer highLife = new CheapBeer(millerCoors, "High Life", "The Cook's of the beer world", "I would be remiss if I did not talk about The Champagne of Beers", "/images/highlife.jpg");
+		
 		cheapBeerRepo.save(budLight);
 		cheapBeerRepo.save(naturalLight);
 		cheapBeerRepo.save(rollingRock);
 		cheapBeerRepo.save(keystone);
 		cheapBeerRepo.save(icehouse);
+		cheapBeerRepo.save(highLife);
 
 	}
 }
