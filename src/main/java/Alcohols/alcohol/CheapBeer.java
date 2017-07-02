@@ -14,7 +14,7 @@ public class CheapBeer {
 	private Long id;
 	
 	private String name;
-	private String tag;
+	private String tagline;
 	private String imageURL;
 	
 	@Lob
@@ -35,8 +35,8 @@ public class CheapBeer {
 		return name;
 	}
 	
-	public String getTag() {
-		return tag;
+	public String getTagline() {
+		return tagline;
 	}
 
 	public String getReview() {
@@ -54,10 +54,10 @@ public class CheapBeer {
 		this.brand = brand;
 	}
 	
-	public CheapBeer(Brand brand, String name, String tag, String review, String imageURL) {
+	public CheapBeer(Brand brand, String name, String tagline, String review, String imageURL) {
 		this.brand = brand;
 		this.name = name;
-		this.tag = tag;
+		this.tagline = tagline;
 		this.review = review;
 		this.imageURL = imageURL;
 	}

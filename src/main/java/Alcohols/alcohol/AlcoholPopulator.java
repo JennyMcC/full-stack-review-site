@@ -27,14 +27,14 @@ public class AlcoholPopulator implements CommandLineRunner {
 		CheapBeer naturalLight = new CheapBeer(anheuserBusch, "Natural Light", "Beer-like water",
 				"Speaking of college, Natural Light is a staple at beer pong tournaments across the land. Its smooth, watery taste will make this useless beverage go down with ease so you can drink endlessly until it's finally time to order pizza. Natural Light has been called 'Better than Beast Ice.'",
 				"/images/beerpong.jpg");
-		CheapBeer rollingRock = new CheapBeer(anheuserBusch, "Rolling Rock", "Green bottles hide weakness",
+		CheapBeer rollingRock = new CheapBeer(anheuserBusch, "Rolling Rock", "The green bottles hide weakness",
 				"When asked, 'How often do you drink Rolling Rock?' the most common response is, 'When it's free.' Rolling Rock has been called 'The cheap beer you forgot about'. The biggest upside to Rolling Rock is it's packaging. It seems to be overwhelmingly sold in bottles so you can feel fancy while still getting that watered down beer taste.",
 				"/images/rollingrock.jpg");
-		CheapBeer keystone = new CheapBeer(millerCoors, "Keystone", "Just, why?", "I'm not sure why one would choose to buy a beer that tastes like you're drinking it out of an old shoe when there are countless other beers you could opt to buy. If there are NOT other beers you can buy, I would suggest taking a night off. Maybe try drinking water for once?", "/images/shoebeer.jpg");
-		CheapBeer icehouse = new CheapBeer(millerCoors, "Icehouse", "Yuck.",
-				"I went to my first kegger at 15 where they had a keg of Icehouse. It very nearly scarred me for life. Luckily, I grew to love beer in other forms but I have never again drank Icehouse. What I'm saying is, Icehouse was brewed to make kids barf. It's fine. It's possible that as an adult I would feel differently about it, but I am unwilling to find out.",
+		CheapBeer keystone = new CheapBeer(millerCoors, "Keystone", "Just, why?", "I'm not sure why one would choose to buy a beer that tastes like you're drinking it out of an old shoe when there are countless other beers you could opt to buy. If there are NOT other beers you can buy, I would suggest taking a night off. Maybe try drinking water for once and calling your mother to brag about your one night of excellent life choices.", "/images/shoebeer.jpg");
+		CheapBeer icehouse = new CheapBeer(millerCoors, "Icehouse", "Save yourself",
+				"I went to my first college party at 16 where they had a keg of Icehouse. It very nearly scarred me for life. Luckily, I grew to love beer in other forms but I have never again drank Icehouse. What I'm saying is, Icehouse was brewed to make kids barf. It's an excellent tool for teaching kids the harsh realities of drinking disgusting beer. It's possible that as an adult I would feel differently about the taste, but I am unwilling to find out.",
 				"/images/bitterbeerface.jpg");
-		CheapBeer highLife = new CheapBeer(millerCoors, "High Life", "The Cook's of the beer world", "I would be remiss if I did not talk about The Champagne of Beers", "/images/highlife.jpg");
+		CheapBeer highLife = new CheapBeer(millerCoors, "High Life", "More like, 'The Andre of Beers'", "I would be remiss if I did not talk about the so-called 'Champagne of Beers'. The beauty of this one is the marketing campaign. Who wouldn't want to try it with a title like that? The answer is, YOU. Have you ever suffered through an actual champagne hangover? Just imagine what fresh hell a 'Champagne of Beers' hangover will bring.", "/images/highlife.jpg");
 		
 		cheapBeerRepo.save(budLight);
 		cheapBeerRepo.save(naturalLight);
