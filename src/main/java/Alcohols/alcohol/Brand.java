@@ -14,14 +14,14 @@ public class Brand {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	private String name;
-	
-	@OneToMany(mappedBy="brand")
-	
+
+	@OneToMany(mappedBy = "brand")
+
 	@OrderBy("name")
 	private Set<CheapBeer> beers;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -29,17 +29,16 @@ public class Brand {
 	public String getName() {
 		return name;
 	}
-	
+
 	public Set<CheapBeer> getBeers() {
 		return beers;
 	}
-	
+
 	private Brand() {
 	}
-	
+
 	public Brand(String name) {
 		this.name = name;
 	}
-	
-	
+
 }

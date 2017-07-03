@@ -3,20 +3,25 @@
 <head>
 
 <title>Navigation page</title>
-	
-<link rel="stylesheet" type="text/css" href="styles.css"/>
-	
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
 </head>
 
 <body>
 
 	<h1>Cheap Beer Reviews</h1>
 
-	<p class="intro">Have you ever been sitting around on a Saturday night with only $10 to your name and thought, 'Gee, there are so many cheap beers out there, how will I ever narrow it down?' Wonder no more, my friends. Click the following links to find out just what you're getting yourself into with each of the following beers: </p>
+	<p class="intro">Have you ever been sitting around on a Saturday
+		night with only $10 to your name and thought, 'Gee, there are so many
+		cheap beers out there, how will I ever narrow it down?' Wonder no
+		more, my friends. Click the following links to find out just what
+		you're getting yourself into with each of the following beers:</p>
 
 	<div class="list">
 		<ul th:each="currentBrand: ${brand}">
-			<a th:href="@{/brand(id=${currentBrand.id})}" th:text="${currentBrand.name}"></a>
+			<a th:href="@{/brand(id=${currentBrand.id})}"
+				th:text="${currentBrand.name}"></a>
 		</ul>
 	</div>
 

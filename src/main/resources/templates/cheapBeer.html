@@ -4,24 +4,27 @@
 
 <title>Reviews</title>
 
-<link rel="stylesheet" type="text/css" href="styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles.css" />
 
 </head>
 
 <body>
 
 	<div th:each="cheapBeer: ${cheapBeer}">
-		<h1 th:text="${cheapBeer.name}"></h1>
+		<h1 class="lastTitle" th:text="${cheapBeer.name}"></h1>
 	</div>
 	
-    <div>
-    	<h4 th:text="${cheapBeer.tagline}"></h4>
-		<p th:text="${cheapBeer.review}"></p>
-		<img th:src="${cheapBeer.imageURL}"/>
-	</div>	
-	
+	<div class="review">
+		<img th:src="${cheapBeer.imageURL}" />
+			<div class="review-container">
+				<h4 th:text="${cheapBeer.tagline}"></h4>
+				<p th:text="${cheapBeer.review}"></p>
+			</div>
+	</div>
+
 	<div class="home">
-		<a href="#" onClick="history.go(-1);return true;">Back to Beers List</a>
+		<a href="#" onClick="history.go(-1);return true;">Back to Beers
+			List</a>
 	</div>
 
 </body>

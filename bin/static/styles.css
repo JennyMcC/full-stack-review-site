@@ -1,17 +1,22 @@
 
 body {
 	background-color: brown;
+	margin: 50px 50px 50px 50px
 }
 
 h1 {
 	background-image: url("/images/cans.jpg");
 	background-size: 100px, 200px;
-	border: 1px solid black;
+	border: 1px solid #050737;
 	box-shadow: 10px 10px 5px black;
+	color: #050737;
 	font-family: "impact";
-	margin: 50px;
 	padding: 10px;
 	text-align: center;
+}
+
+.lastTitle {
+	color: black;
 }
 
 h4 {
@@ -20,7 +25,7 @@ h4 {
 	text-decoration: underline;
 }
 
-p {
+.intro {
 	font-family: bookman;
 	margin-left: 150px;
 	margin-right: 150px;
@@ -46,6 +51,19 @@ img {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+}
+
+.review {
+	display: flex;
+	flex-direction: row;
+	align-items: center;	
+}
+
+.review-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 50px;
 }
 
 .home:before {

@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AlcoholController {
-	
+
 	@Resource
 	private BrandRepo brandRepo;
 	@Resource
 	private CheapBeerRepo cheapBeerRepo;
-	
+
 	@RequestMapping("/alcohol")
 	public String fetchBrand(Model model) {
 		model.addAttribute("brand", brandRepo.findAll());
@@ -26,11 +26,11 @@ public class AlcoholController {
 		model.addAttribute(brandRepo.findOne(id));
 		return "brand";
 	}
-	
+
 	@RequestMapping("/cheapBeer")
 	public String fetchCheapBeer(@RequestParam("id") long id, Model model) {
 		model.addAttribute(cheapBeerRepo.findOne(id));
 		return "cheapBeer";
 	}
-	
+
 }
