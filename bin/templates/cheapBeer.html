@@ -21,6 +21,17 @@
 				<p th:text="${cheapBeer.review}"></p>
 			</div>
 	</div>
+	
+	<li th:each="tag: ${cheapBeer.tags}"><a th:text="${tag.name}" /></li>
+	
+	<form action="@{/tags/add/{tagId}(tagId=${tag.id})}">
+		<select name="tags">
+			<option value="watery">watery</option>
+			<option value="light">light</option>
+			<option value="niceBottles">nice bottles</option>
+		</select>
+			
+	</form>
 
 	<div class="home">
 		<a href="#" onClick="history.go(-1);return true;">Back to Beers

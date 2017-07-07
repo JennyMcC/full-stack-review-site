@@ -34,6 +34,7 @@ public class Brand {
 		return beers;
 	}
 
+	@SuppressWarnings("unused")
 	private Brand() {
 	}
 

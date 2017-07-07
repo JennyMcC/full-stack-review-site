@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Tags</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+<body>
+
+	<h1>Tags</h1>
+
+	<form>
+		<ul>
+			<li th:each="tag: ${tags}"><span th:text="${tag.name}" />
+			<button th:formaction="@{/tags/delete/{tagId}(tagId=${tag.id})}">delete</button></li>
+		</ul>
+	</form>
+	
+
+</body>
+</html>
