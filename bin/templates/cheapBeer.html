@@ -22,7 +22,18 @@
 			</div>
 	</div>
 	
-	<li th:each="tag: ${cheapBeer.tags}"><a th:text="${tag.name}" /></li>
+	<form>
+	<input type="hidden" name="cheapBeerId" th:value="${cheapBeer.id}" />
+	<ul>
+		<li th:each="tag: ${cheapBeer.tags}">
+			<a th:href="@{/tags(id=${tag.id})}" th:text="${tag.name}" ></a>
+			<button name="tagId" th:value="${tag.id}" th:formaction="@{/tags/delete}">delete</button>
+		</li>
+	</ul>
+	</form>
+	
+	
+	
 	
 	<form action="@{/tags/add/{tagId}(tagId=${tag.id})}">
 		<select name="tags">
@@ -30,7 +41,7 @@
 			<option value="light">light</option>
 			<option value="niceBottles">nice bottles</option>
 		</select>
-			
+		
 	</form>
 
 	<div class="home">

@@ -47,23 +47,21 @@ public class AlcoholController {
 		return "tags";
 	}
 	
-	@RequestMapping("/tags/delete/{id}")
-	public String deleteTag(@PathVariable long id) {
-		Tag toDelete = tagRepo.findOne(id);
+	@RequestMapping("/tags/delete")
+	public String deleteTag(@RequestParam long tagId, @RequestParam long cheapBeerId) {
+		Tag toDelete = tagRepo.findOne(tagId);
 		for(CheapBeer cheapBeer: toDelete.getCheapBeers()) {
-			// this is the same as fish.getFoods().remove(toDelete)
 			cheapBeer.remove(toDelete);
 			cheapBeerRepo.save(cheapBeer);
 		}
 		tagRepo.delete(toDelete);
-		return "redirect:/tags";
+		return "redirect:/cheapBeer?id=" + cheapBeerId;
 	}
 	
 	@RequestMapping("/tags/add/{id}")
-	public String addTag(@PathVariable long id) {
+	public String addTag(@RequestParam long id) {
 		Tag toSave = tagRepo.findOne(id);
 		for(CheapBeer cheapBeer: toSave.getCheapBeers()) {
-			// this is the same as fish.getFoods().remove(toDelete)
 			cheapBeer.add(toSave);
 			cheapBeerRepo.save(cheapBeer);
 		}

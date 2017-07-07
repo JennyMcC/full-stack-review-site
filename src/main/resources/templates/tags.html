@@ -13,8 +13,9 @@
 
 	<form>
 		<ul>
-			<li th:each="tag: ${tags}"><span th:text="${tag.name}" />
-			<button th:formaction="@{/tags/delete/{tagId}(tagId=${tag.id})}">delete</button></li>
+			<li th:each="tag: ${tags}">
+			<div th:text="${tag.name}"/>
+			</li>
 		</ul>
 	</form>
 	

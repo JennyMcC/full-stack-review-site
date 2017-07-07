@@ -12,14 +12,14 @@ public class Tag {
 	
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	
 	private String name;
 	
 	@ManyToMany(mappedBy="tags")
 	private Set<CheapBeer> cheapBeers;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 	
