@@ -93,6 +93,36 @@ img {
 	width: 30%;
 }
 
+.tags {
+	font-size: 80%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.tags a:link {
+	color: black;
+}
+
+.tags a:visited {
+	color: black;
+}
+
+.tags a:hover {
+	color: yellow;
+}
+
+.button {
+	border-radius: 4px;
+	font-size: 10px;
+}
+
+.tagPage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .home:before {
 	content: url("images/brokenbottle.png");
 	margin-right: 5px;

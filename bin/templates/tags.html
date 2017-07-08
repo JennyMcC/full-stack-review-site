@@ -9,23 +9,14 @@
 </head>
 <body>
 
-	
 	<h1 th:each="currentTag: ${tag}" th:text="${currentTag.name}"></h1>
 	
-	<div>
-		<ul th:each="currentTag: ${tag.cheapBeers}" 
+	<div class="tagPage">
+		<ul th:each="currentTag: ${tag.cheapBeers}"
 			th:text="${currentTag.name}">
-			
-			
-			
 		</ul>
 	</div>
 	
-	
-	
-	
-
-	
-	
 </body>
 </html>
+
