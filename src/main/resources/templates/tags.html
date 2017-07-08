@@ -9,16 +9,23 @@
 </head>
 <body>
 
-	<h1>Tags</h1>
-
-	<form>
-		<ul>
-			<li th:each="tag: ${tags}">
-			<div th:text="${tag.name}"/>
-			</li>
+	
+	<h1 th:each="currentTag: ${tag}" th:text="${currentTag.name}"></h1>
+	
+	<div>
+		<ul th:each="currentTag: ${tag.cheapBeers}" 
+			th:text="${currentTag.name}">
+			
+			
+			
 		</ul>
-	</form>
+	</div>
+	
+	
+	
 	
 
+	
+	
 </body>
 </html>

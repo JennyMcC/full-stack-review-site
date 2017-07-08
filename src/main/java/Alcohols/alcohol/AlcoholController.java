@@ -42,10 +42,16 @@ public class AlcoholController {
 	}
 	
 	@RequestMapping("/tags")
-	public String showTags(Model model) {
-		model.addAttribute("tags", tagRepo.findAll());
+	public String fetchTags(@RequestParam("id") long id, Model model) {
+		model.addAttribute(tagRepo.findOne(id));
 		return "tags";
 	}
+	
+//	@RequestMapping("/tags")
+//	public String showTags(Model model) {
+//		model.addAttribute("tags", tagRepo.findAll());
+//		return "tags";
+//	}
 	
 	@RequestMapping("/tags/delete")
 	public String deleteTag(@RequestParam long tagId, @RequestParam long cheapBeerId) {

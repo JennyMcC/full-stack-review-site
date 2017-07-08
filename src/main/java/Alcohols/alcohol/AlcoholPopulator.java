@@ -26,9 +26,9 @@ public class AlcoholPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Tag watery = new Tag("watery");
-		Tag niceBottles = new Tag("nice bottles");
-		Tag light = new Tag("light");
+		Tag watery = new Tag("Watery");
+		Tag niceBottles = new Tag("Nice Bottles");
+		Tag light = new Tag("Light");
 		tagRepo.save(watery);
 		tagRepo.save(niceBottles);
 		tagRepo.save(light);
