@@ -18,7 +18,7 @@
 		more, my friends. Click the following links to find out just what
 		you're getting yourself into with each of the following beers:</p>
 
-	<div class="list">
+	<div class="beers">
 		<ul th:each="currentBrand: ${brand}">
 			<a th:href="@{/brand(id=${currentBrand.id})}"
 				th:text="${currentBrand.name}"></a>

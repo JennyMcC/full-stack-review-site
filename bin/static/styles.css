@@ -16,22 +16,15 @@ h1 {
 }
 
 .lastTitle {
-	color: black;
+	color: #000000;
 }
 
 .intro {
-	font-family: bookman;
 	margin-left: 150px;
 	margin-right: 150px;
 	padding-bottom: 10px;
 	padding-top: 20px;
 	text-indent: 25px;
-}
-
-.list {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 }
 
 .beers {
@@ -100,27 +93,20 @@ img {
 }
 
 .tags a:link {
-	color: black;
+	color: #000000;
 }
 
 .tags a:visited {
-	color: black;
+	color: #000000;
 }
 
 .tags a:hover {
-	color: yellow;
+	color: #FFFF00;
 }
 
 .button {
 	border-radius: 4px;
 	font-size: 10px;
-}
-
-.tagPage {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
 }
 
 .home:before {
@@ -136,14 +122,14 @@ img {
 }
 
 .home a:link {
-	color: black;
+	color: #000000;
 }
 
 .home a:visited {
-	color: black;
+	color: #000000;
 }
 
 .home a:hover {
-	color: yellow;
+	color: #FFFF00;
 }
 

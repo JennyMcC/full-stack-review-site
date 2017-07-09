@@ -11,7 +11,7 @@
 
 	<h1 th:each="currentTag: ${tag}" th:text="${currentTag.name}"></h1>
 	
-	<div class="tagPage">
+	<div class="beers">
 		<ul th:each="currentTag: ${tag.cheapBeers}">
 			<a th:href="@{/cheapBeer(id=${currentTag.id})}"
 				th:text="${currentTag.name}"></a>
