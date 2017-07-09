@@ -9,12 +9,18 @@
 </head>
 <body>
 
-	<h1 class="lastTitle" th:each="currentTag: ${tag}" th:text="${currentTag.name}"></h1>
+	<h1 th:each="currentTag: ${tag}" th:text="${currentTag.name}"></h1>
 	
 	<div class="tagPage">
-		<ul th:each="currentTag: ${tag.cheapBeers}"
-			th:text="${currentTag.name}">
+		<ul th:each="currentTag: ${tag.cheapBeers}">
+			<a th:href="@{/cheapBeer(id=${currentTag.id})}"
+				th:text="${currentTag.name}"></a>
 		</ul>
+	</div>
+	
+	<div class="home">
+		<a href="#" onClick="history.go(-1);return true;">Back to Last Page
+			List</a>
 	</div>
 	
 </body>

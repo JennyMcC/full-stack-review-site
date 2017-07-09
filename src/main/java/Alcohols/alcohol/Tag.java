@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OrderBy;
 
 @Entity
 public class Tag {
@@ -17,6 +18,7 @@ public class Tag {
 	private String name;
 	
 	@ManyToMany(mappedBy="tags")
+	@OrderBy("name")
 	private Set<CheapBeer> cheapBeers;
 
 	public Long getId() {
