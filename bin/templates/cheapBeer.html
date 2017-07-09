@@ -33,14 +33,16 @@
 	</form>
 	
 	
-	<form action="@{/tags/add/{tagId}(tagId=${tag.id})}">
+	<form action="@{/tags/add}">
 		<select name="tags">
+			<option value="--">--</option>
 			<option value="watery">watery</option>
 			<option value="light">light</option>
 			<option value="fancyBottles">fancy bottles</option>
 			<option value="heavier">heavier</option>
 			<option value="chuggable">chuggable</option>
 		</select>
+	
 		
 	</form>
 
