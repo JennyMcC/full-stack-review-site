@@ -24,14 +24,11 @@
 	
 	<form class="tags">
 	<input type="hidden" name="cheapBeerId" th:value="${cheapBeer.id}" />
-	
 		<li th:each="tag: ${cheapBeer.tags}">
 			<a th:href="@{/tags(id=${tag.id})}" th:text="${tag.name}" ></a>
 			<button class="button" name="tagId" th:value="${tag.id}" th:formaction="@{/tags/delete}">delete</button>
 		</li>
-	
 	</form>
-	
 	
 	<form action="@{/tags/add}">
 		<select name="tags">
@@ -41,9 +38,7 @@
 			<option value="fancyBottles">fancy bottles</option>
 			<option value="heavier">heavier</option>
 			<option value="chuggable">chuggable</option>
-		</select>
-	
-		
+		</select>	
 	</form>
 
 	<div class="home">

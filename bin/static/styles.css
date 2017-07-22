@@ -6,12 +6,13 @@ body {
 
 h1 {
 	background-image: url("/images/cans.jpg");
-	background-size: 100px, 200px;
+	background-size: 150px, 250px;
 	border: 1px solid #050737;
 	box-shadow: 10px 10px 5px black;
 	color: #050737;
 	font-family: "impact";
-	padding: 10px;
+	font-size: 300%;
+	padding: 15px;
 	text-align: center;
 }
 
@@ -25,6 +26,7 @@ h1 {
 	padding-bottom: 10px;
 	padding-top: 20px;
 	text-indent: 25px;
+	font-size: 150%;
 }
 
 .beers {
@@ -42,7 +44,7 @@ ul a {
 	border-width: 5px;
 	padding: 40px;
 	font-family: "impact";
-	font-size: 150%;
+	font-size: 200%;
  	display: flex;
 	justify-content: center;
 }
@@ -70,6 +72,7 @@ ul a:hover {
 	flex-direction: column;
 	justify-content: center;
 	margin-left: 50px;
+	font-size: 150%;
 }
 
 h4 {
@@ -87,7 +90,6 @@ img {
 }
 
 .tags {
-	font-size: 80%;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
